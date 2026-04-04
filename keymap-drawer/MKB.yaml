@@ -23,7 +23,7 @@ layers:
   - J
   - K
   - L
-  - SEMI
+  - MINUS
   - {t: DELETE, h: Mouse}
   - LSHFT
   - Z
@@ -35,7 +35,7 @@ layers:
   - M
   - COMMA
   - DOT
-  - UP
+  - SEMI
   - FSLH
   - {t: TAB, h: LCTL}
   - LGUI
@@ -56,27 +56,21 @@ layers:
   - INT KANA
   - ENTER
   - LANG ZENKAKUHANKAKU
-  - END
+  - LANG ZENKAKUHANKAKU
   - A
   - B
   Fnc:
-  - GRAVE
-  - PG UP
-  - UP
-  - PG DN
-  - HOME
-  - {t: ▽, type: trans}
   - F1
   - F2
   - F3
   - F4
   - F5
   - {t: ▽, type: trans}
-  - '&tog_ls'
-  - LEFT
-  - DOWN
-  - RIGHT
-  - END
+  - F1
+  - UP ARROW
+  - F3
+  - F4
+  - F5
   - {t: ▽, type: trans}
   - F6
   - F7
@@ -84,9 +78,15 @@ layers:
   - F9
   - F10
   - {t: ▽, type: trans}
+  - LEFT
+  - DOWN ARROW
+  - RIGHT
+  - F9
+  - F10
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - BKSP
-  - DEL
+  - F11
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -122,21 +122,21 @@ layers:
   - CAPS
   - '1'
   - '2'
-  - '3'
-  - '4'
-  - '5'
+  - '7'
+  - '8'
+  - '9'
   - '6'
   - '7'
   - '8'
   - '9'
   - '0'
   - {t: ▽, type: trans}
+  - AT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '4'
+  - '5'
+  - '6'
   - MINUS
   - EQUAL
   - LBKT
@@ -144,11 +144,11 @@ layers:
   - BSLH
   - {t: ▽, type: trans}
   - {t: SPACE, h: LSHFT}
-  - BACKSPACE
-  - DEL
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - PERIOD
+  - '0'
+  - '1'
+  - '2'
+  - '3'
   - {t: ▽, type: trans}
   - FSLH
   - SEMI
