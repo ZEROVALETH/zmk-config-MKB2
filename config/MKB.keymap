@@ -41,9 +41,9 @@
         function_layer {
             label = "Fnc";
             bindings = <
-&kp F1    &kp F2    &kp F3     &kp F4    &kp F5     &trans         &kp F1     &kp UP_ARROW    &kp F3     &kp F4     &kp F5     &trans
+&kp F1    &kp F2    &kp F3     &kp F4    &kp F5     &trans         &trans     &kp UP_ARROW    &trans     &trans     &trans     &trans
 &kp F6    &kp F7    &kp F8     &kp F9    &kp F10    &trans         &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &kp F9     &kp F10    &trans
-&trans    &kp BKSP  &kp F11    &trans    &trans     &trans         &kp F11    &kp F12         &trans     &trans     &trans     &trans
+&trans    &trans    &kp F11    &trans    &trans     &trans         &trans     &trans          &trans     &trans     &trans     &trans
 &trans    &trans    &kp LALT             &kp ENTER  &kp ENTER      &kp ENTER  &kp ENTER                  &trans     &trans     &trans
 &kp LEFT  &kp UP    &kp SPACE  &kp DOWN  &kp RIGHT                            &kp HOME        &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
                                &kp A                                                          &kp B
@@ -55,7 +55,7 @@
         num_layer {
             label = "Num";
             bindings = <
-&kp CAPS         &kp N1      &kp N2     &kp N7    &kp N8     &kp N9         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &trans
+&kp CAPS         &trans      &trans     &kp N7    &kp N8     &kp N9         &trans     &trans     &trans     &trans     &trans     &trans
 &kp AT           &trans      &trans     &kp N4    &kp N5     &kp N6         &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH   &trans
 &mt LSHFT SPACE  &kp PERIOD  &kp N0     &kp N1    &kp N2     &kp N3         &trans     &kp FSLH   &kp SEMI   &kp SQT    &trans     &trans
 &trans           &kp ENTER   &kp ENTER            &kp ENTER  &kp ENTER      &kp ENTER  &kp ENTER             &trans     &trans     &trans
