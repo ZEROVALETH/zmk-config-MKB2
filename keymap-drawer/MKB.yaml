@@ -42,20 +42,20 @@ layers:
   - LALT
   - {t: LCTRL, h: Num}
   - {t: LEFT ALT, h: Fnc}
-  - {t: SPACE, h: Fnc}
+  - {t: ENTER, h: Fnc}
   - {t: SPACE, h: Num}
   - LEFT
   - DOWN
-  - RIGHT
+  - BACKSPACE
   - LEFT
   - UP
   - SPACE
   - DOWN
   - RIGHT
   - HOME
-  - PG UP
+  - INT KANA
   - ENTER
-  - PG DN
+  - LANG ZENKAKUHANKAKU
   - END
   - A
   - B
