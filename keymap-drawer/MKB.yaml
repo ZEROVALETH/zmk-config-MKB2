@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: MKB}
 layers:
   Def:
-  - A
+  - ESCAPE
   - Q
   - W
   - E
@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - BKSP
-  - {t: ESC, h: BT}
+  - {t: TAB, h: BT}
   - A
   - S
   - D
@@ -40,8 +40,8 @@ layers:
   - {t: ESC, h: LCTL}
   - LGUI
   - LALT
-  - {t: SPACE, h: Num}
-  - {t: SPACE, h: Fnc}
+  - {t: LCTRL, h: Num}
+  - {t: LEFT ALT, h: Fnc}
   - {t: SPACE, h: Fnc}
   - {t: SPACE, h: Num}
   - LEFT
