@@ -12,8 +12,8 @@ layers:
   - I
   - O
   - P
-  - BKSP
-  - {t: TAB, h: BT}
+  - BACKSPACE
+  - {t: LANG HIRAGANA, h: BT}
   - A
   - S
   - D
@@ -24,7 +24,7 @@ layers:
   - K
   - L
   - SEMI
-  - {t: SQT, h: Mouse}
+  - {t: DELETE, h: Mouse}
   - LSHFT
   - Z
   - X
@@ -37,7 +37,7 @@ layers:
   - DOT
   - UP
   - FSLH
-  - {t: ESC, h: LCTL}
+  - {t: TAB, h: LCTL}
   - LGUI
   - LALT
   - {t: LCTRL, h: Num}
