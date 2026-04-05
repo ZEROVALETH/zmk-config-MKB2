@@ -43,7 +43,7 @@ layers:
   - {t: LCTRL, h: Num}
   - {t: LEFT ALT, h: Fnc}
   - {t: ENTER, h: Fnc}
-  - {t: SPACE, h: Num}
+  - {t: SPACE, h: Mouse}
   - LEFT
   - DOWN
   - BACKSPACE
