@@ -5,11 +5,12 @@
         compatible = "zmk,input-listener";
         status = "okay";
         device = <&trackball_split>;
-        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT|INPUT_TRANSFORM_Y_INVERT)>, 
-                           <&mouse_runtime_input_processor &scroll_runtime_input_processor>;
+        input-processors =  <&zip_temp_layer 3 1500>,
+                            <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT|INPUT_TRANSFORM_Y_INVERT)>, 
+                            <&mouse_runtime_input_processor &scroll_runtime_input_processor>;
 
         scroll {
-            layers = <99>;
+            layers = <4>;
             input-processors = <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>, 
                                <&zip_xy_to_scroll_mapper>, 
                                <&scroll_runtime_input_processor>;
