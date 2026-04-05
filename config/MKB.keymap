@@ -27,26 +27,26 @@
         default_layer {
             label = "Def";
             bindings = <
-&kp ESCAPE            &kp Q     &kp W      &kp E     &kp R          &kp T                  &kp Y           &kp U          &kp I         &kp O      &kp P                    &kp BACKSPACE
-&lt BT LANG_HIRAGANA  &kp A     &kp S      &kp D     &kp F          &kp G                  &kp H           &kp J          &kp K         &kp L      &kp MINUS                &lt MOUSE DELETE
-&kp LSHFT             &kp Z     &kp X      &kp C     &kp V          &kp B                  &kp N           &kp M          &kp COMMA     &kp DOT    &kp SEMI                 &kp FSLH
-&mt LCTL TAB          &kp LGUI  &kp LALT             &lt NUM LCTRL  &lt FUNC LEFT_ALT      &lt FUNC ENTER  &lt NUM SPACE                &kp LEFT   &kp DOWN                 &kp BACKSPACE
-&kp LEFT              &kp UP    &kp SPACE  &kp DOWN  &kp RIGHT                                             &kp HOME       &kp INT_KANA  &kp ENTER  &kp LANG_ZENKAKUHANKAKU  &kp LANG_ZENKAKUHANKAKU
-                                           &kp A                                                                          &kp B
+&kp ESCAPE            &kp Q     &kp W      &kp E     &kp R          &kp T                  &kp Y           &kp U        &kp I         &kp O      &kp P                    &kp BACKSPACE
+&lt BT LANG_HIRAGANA  &kp A     &kp S      &kp D     &kp F          &kp G                  &kp H           &kp J        &kp K         &kp L      &kp MINUS                &lt MOUSE DELETE
+&kp LSHFT             &kp Z     &kp X      &kp C     &kp V          &kp B                  &kp N           &kp M        &kp COMMA     &kp DOT    &kp SEMI                 &kp FSLH
+&mt LCTL TAB          &kp LGUI  &kp LALT             &lt NUM LCTRL  &lt FUNC LEFT_ALT      &lt FUNC ENTER  &lt 3 SPACE                &kp LEFT   &kp DOWN                 &kp BACKSPACE
+&kp LEFT              &kp UP    &kp SPACE  &kp DOWN  &kp RIGHT                                             &kp HOME     &kp INT_KANA  &kp ENTER  &kp LANG_ZENKAKUHANKAKU  &kp LANG_ZENKAKUHANKAKU
+                                           &kp A                                                                        &kp B
             >;
 
-        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         function_layer {
             label = "Fnc";
             bindings = <
-&kp F1    &kp F2    &kp F3     &kp F4    &kp F5     &trans         &trans     &kp UP_ARROW    &trans     &trans     &trans     &trans
-&kp F6    &kp F7    &kp F8     &kp F9    &kp F10    &trans         &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &kp F9     &kp F10    &trans
-&trans    &trans    &kp F11    &trans    &trans     &trans         &trans     &trans          &trans     &trans     &trans     &trans
-&trans    &trans    &kp LALT             &kp ENTER  &kp ENTER      &kp ENTER  &kp ENTER                  &trans     &trans     &trans
-&kp LEFT  &kp UP    &kp SPACE  &kp DOWN  &kp RIGHT                            &kp HOME        &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
-                               &kp A                                                          &kp B
+&kp F1    &kp F2  &kp F3     &kp F4    &kp F5     &trans         &trans     &kp UP_ARROW    &trans     &trans     &trans     &trans
+&kp F6    &kp F7  &kp F8     &kp F9    &kp F10    &trans         &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &kp F9     &kp F10    &trans
+&trans    &trans  &kp F11    &trans    &trans     &trans         &trans     &trans          &trans     &trans     &trans     &trans
+&trans    &trans  &kp LALT             &kp ENTER  &kp ENTER      &kp ENTER  &kp ENTER                  &trans     &trans     &trans
+&kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                            &kp HOME        &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
+                             &kp A                                                          &kp B
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
