@@ -52,8 +52,8 @@ layers:
   - SPACE
   - DOWN
   - RIGHT
-  - HOME
-  - INT KANA
+  - {t: Mouse, h: toggle}
+  - LANG HIRAGANA
   - ENTER
   - LANG ZENKAKUHANKAKU
   - LANG ZENKAKUHANKAKU
@@ -196,9 +196,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - '&mkp MB1'
   - '&mkp MB3'
+  - '&mkp MB2'
   - '&mkp MB2'
   - {t: ▽, type: trans}
   - {type: held}
@@ -229,7 +229,7 @@ layers:
   - SPACE
   - DOWN
   - RIGHT
-  - HOME
+  - {t: Def, h: toggle}
   - PG UP
   - ENTER
   - PG DN
