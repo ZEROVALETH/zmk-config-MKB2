@@ -1,4 +1,5 @@
 #include <input/processors/runtime-input-processor.dtsi>
+#include <input/processors.dtsi>
 
 / {
     trackball_listener: trackball_listener {
@@ -46,6 +47,9 @@
         status = "okay";
         device = <&stick_split>;
         
+        //追加0406
+        input-processors = <&mouse_runtime_input_processor>;
+        /*
         layer0 {
             layers = <0>;
             input-processors = <&zip_xy_to_scroll_mapper>, 
@@ -55,6 +59,7 @@
             layers = <1>;
             input-processors = <&scroll_runtime_input_processor>;
         };
+        */
     };
     
     trackpad_listener: trackpad_listener {

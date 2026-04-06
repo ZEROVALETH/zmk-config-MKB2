@@ -18,7 +18,9 @@
     triggers-per-rotation = <1>;
 };
 
+/*
 / {
+    
     anin0: analog_input_0 {
         compatible = "zmk,analog-input";
         sampling-hz = <100>;
@@ -45,6 +47,7 @@
             input-code = <INPUT_REL_Y>;
         };
     };
+    
 
     split_inputs {
         #address-cells = <1>;
@@ -58,6 +61,7 @@
         };
     };
 };
+*/
 
 / {
     anin0: analog_input_0 {
