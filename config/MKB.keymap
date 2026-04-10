@@ -32,7 +32,7 @@
 &kp LSHFT             &kp Z     &kp X      &kp C     &kp V          &kp B                  &kp N           &kp M        &kp COMMA          &kp DOT    &kp SEMI                 &kp FSLH
 &mt LCTL TAB          &kp LGUI  &kp LALT             &lt NUM LCTRL  &lt FUNC LEFT_ALT      &lt FUNC ENTER  &lt 3 SPACE                     &kp LEFT   &kp DOWN                 &kp BACKSPACE
 &kp LEFT              &kp UP    &kp SPACE  &kp DOWN  &kp RIGHT                                             &to 3        &kp LANG_HIRAGANA  &kp ENTER  &kp LANG_ZENKAKUHANKAKU  &kp LANG_ZENKAKUHANKAKU
-                                           &kp A                                                                        &kp B
+                                           &kp B                                                                        &kp B
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
