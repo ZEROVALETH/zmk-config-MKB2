@@ -77,7 +77,7 @@
             label = "COPY";
         };
 
-        paste: cut {
+        paste: paste {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LCTRL &kp V>;
@@ -128,7 +128,7 @@
             bindings = <
     &kp LSHFT             &kp Q     &kp W         &kp E      &kp R             &kp T             &kp Y           &kp U        &kp I                    &kp O      &kp P                    &kp MINUS
     &lt BT LANG_HIRAGANA  &kp A     &kp S         &kp D      &kp F             &kp G             &kp H           &kp J        &kp K                    &kp L      &kp COLON                &lt MOUSE DELETE
-    &kp ESCAPE            &kp Z     &td_cuttingX  &td_paste  &td_paste         &kp B             &kp N           &kp M        &kp COMMA                &kp DOT    &kp SEMI                 &kp FSLH
+    &kp ESCAPE            &kp Z     &td_cuttingX  &td_copy &td_paste         &kp B             &kp N           &kp M        &kp COMMA                &kp DOT    &kp SEMI                 &kp FSLH
     &mt LCTL TAB          &kp LGUI  &td_redo                 &kp LEFT_CONTROL  &kp LEFT_ALT      &lt FUNC ENTER  &lt 3 SPACE                           &kp LEFT   &kp DOWN                 &kp BACKSPACE
     &kp LEFT              &kp UP    &kp SPACE     &kp DOWN   &kp RIGHT                                           &to 3        &kp LANG_ZENKAKUHANKAKU  &kp ENTER  &kp LANG_ZENKAKUHANKAKU  &kp LANG_ZENKAKUHANKAKU
                                                 &kp B                                                                       &kp A
