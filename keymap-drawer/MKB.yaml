@@ -28,7 +28,7 @@ layers:
   - ESCAPE
   - Z
   - '&td_cuttingX'
-  - '&td_paste'
+  - '&td_copy'
   - '&td_paste'
   - B
   - N
