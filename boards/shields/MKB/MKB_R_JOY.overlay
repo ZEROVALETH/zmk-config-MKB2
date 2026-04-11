@@ -72,9 +72,9 @@
             mv-mid = <1600>;
             mv-min-max = <1600>;
             mv-deadzone = <88>;
-            scale-multiplier = <1>;
-            scale-divisor = <800>;
-            invert;
+            scale-multiplier = <1>; //変えない Def 1
+            scale-divisor = <400>; //速度設定　小さくすると速くなる
+            //invert;
             evt-type = <INPUT_EV_REL>;
             input-code = <INPUT_REL_X>;
         };
@@ -83,9 +83,9 @@
             mv-mid = <1600>;
             mv-min-max = <1600>;
             mv-deadzone = <88>;
-            scale-multiplier = <1>;
-            scale-divisor = <800>;
-            invert;
+            scale-multiplier = <1>; //変えない Def 1
+            scale-divisor = <800>; //速度設定　小さくすると速くなる
+            //invert;
             evt-type = <INPUT_EV_REL>;
             input-code = <INPUT_REL_Y>;
         };
