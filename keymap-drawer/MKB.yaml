@@ -12,7 +12,7 @@ layers:
   - I
   - O
   - P
-  - BACKSPACE
+  - MINUS
   - {t: LANG HIRAGANA, h: BT}
   - A
   - S
@@ -23,7 +23,7 @@ layers:
   - J
   - K
   - L
-  - MINUS
+  - COLON
   - {t: DELETE, h: Mouse}
   - ESCAPE
   - Z
