@@ -30,183 +30,182 @@
         };
     };
 
-    //TAPDANCE
-
     behaviors {
-        td_copy: compatible = "zmk,behavior-tap-dance";
+        td_copy: td_copy {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_COPY";
+            #binding-cells = <0>;
+            bindings = <&kp C>, <&copy>;
+            tapping-term-ms = <180>;
+        };
 
-        #binding-cells = <0>;
-        tapping-term-ms = <180>;
-        bindings = <&kp C>, <&copy>;
+        td_paste: td_paste {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_PASTE";
+            #binding-cells = <0>;
+            bindings = <&kp V>, <&paste>;
+
+            tapping-term-ms = <180>;
+        };
+
+        td_redo: td_redo {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_REDO";
+            #binding-cells = <0>;
+            bindings = <&kp Z>, <&redo>;
+
+            tapping-term-ms = <180>;
+        };
+
+        td_cuttingX: td_cuttingX {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_CUTTINGX";
+            #binding-cells = <0>;
+            bindings = <&kp X>, <&cuting>;
+
+            tapping-term-ms = <180>;
+        };
     };
-
-    td_paste: td_paste {
-        compatible = "zmk,behavior-tap-dance";
-        label = "TD_PASTE";
-        #binding-cells = <0>;
-        bindings = <&kp V>, <&paste>;
-
-        tapping-term-ms = <180>;
-    };
-
-    td_redo: td_redo {
-        compatible = "zmk,behavior-tap-dance";
-        label = "TD_REDO";
-        #binding-cells = <0>;
-        bindings = <&kp Z>, <&redo>;
-
-        tapping-term-ms = <180>;
-    };
-
-    td_cuttingX: td_cuttingX {
-        compatible = "zmk,behavior-tap-dance";
-        label = "TD_CUTTINGX";
-        #binding-cells = <0>;
-        bindings = <&kp X>, <&cuting>;
-
-        tapping-term-ms = <180>;
-    };
-};
 
 //通常keymap
 
-macros {
-    copy: copy {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LCTRL &kp C>;
-        label = "COPY";
+    macros {
+        copy: copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp C>;
+            label = "COPY";
+        };
+
+        paste: cut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp V>;
+            label = "CUT";
+        };
+
+        redo: redo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp Z>;
+            label = "REDO";
+        };
+
+        cuting: cuting {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp X>;
+            label = "CUTING";
+        };
+
+        TY53754: TY53754 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(T) &kp LS(Y) &kp N5 &kp N3 &kp N5 &kp N7 &kp N4>;
+            label = "TY53754";
+        };
+
+        ctrl_alt_del: ctrl_alt_del {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RCTRL &kp LEFT_ALT &kp DELETE>;
+            label = "CTRL_ALT_DEL";
+        };
+
+        word: word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N5 &kp N0 &kp N2 &kp H &kp A &kp S &kp I &kp LS(M)>;
+            label = "word";
+        };
     };
 
-    paste: cut {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LCTRL &kp V>;
-        label = "CUT";
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            label = "Def";
+            bindings = <
+    &kp LSHFT             &kp Q     &kp W         &kp E      &kp R             &kp T             &kp Y           &kp U        &kp I                    &kp O      &kp P                    &kp MINUS
+    &lt BT LANG_HIRAGANA  &kp A     &kp S         &kp D      &kp F             &kp G             &kp H           &kp J        &kp K                    &kp L      &kp COLON                &lt MOUSE DELETE
+    &kp ESCAPE            &kp Z     &td_cuttingX  &td_paste  &td_paste         &kp B             &kp N           &kp M        &kp COMMA                &kp DOT    &kp SEMI                 &kp FSLH
+    &mt LCTL TAB          &kp LGUI  &td_redo                 &kp LEFT_CONTROL  &kp LEFT_ALT      &lt FUNC ENTER  &lt 3 SPACE                           &kp LEFT   &kp DOWN                 &kp BACKSPACE
+    &kp LEFT              &kp UP    &kp SPACE     &kp DOWN   &kp RIGHT                                           &to 3        &kp LANG_ZENKAKUHANKAKU  &kp ENTER  &kp LANG_ZENKAKUHANKAKU  &kp LANG_ZENKAKUHANKAKU
+                                                &kp B                                                                       &kp A
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        function_layer {
+            label = "Fnc";
+            bindings = <
+    &kp F1    &kp F2  &kp F3     &kp F4    &kp F5     &trans         &trans         &kp UP_ARROW    &trans     &trans     &trans     &trans
+    &kp F6    &kp F7  &kp F8     &kp F9    &kp F10    &trans         &kp LEFT       &kp DOWN_ARROW  &kp RIGHT  &kp F9     &kp F10    &trans
+    &trans    &trans  &kp F11    &trans    &trans     &trans         &ctrl_alt_del  &TY53754        &word      &trans     &trans     &trans
+    &trans    &trans  &kp LALT             &kp ENTER  &kp ENTER      &kp ENTER      &kp ENTER                  &trans     &trans     &trans
+    &kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                                &kp HOME        &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
+                                &kp A                                                              &kp B
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        num_layer {
+            label = "Num";
+            bindings = <
+    &kp CAPS         &trans      &trans     &kp N7    &kp N8     &kp N9         &trans     &trans     &trans     &trans     &trans     &trans
+    &kp AT           &trans      &trans     &kp N4    &kp N5     &kp N6         &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH   &trans
+    &mt LSHFT SPACE  &kp PERIOD  &kp N0     &kp N1    &kp N2     &kp N3         &trans     &kp FSLH   &kp SEMI   &kp SQT    &trans     &trans
+    &trans           &kp ENTER   &kp ENTER            &kp ENTER  &kp ENTER      &kp ENTER  &kp ENTER             &trans     &trans     &trans
+    &kp LEFT         &kp UP      &kp SPACE  &kp DOWN  &kp RIGHT                            &kp HOME   &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
+                                            &kp A                                                     &kp B
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        mouse_layer {
+            label = "Mouse";
+            bindings = <
+    &trans    &trans  &trans     &trans    &trans     &trans      &trans         &trans    &trans     &trans     &trans     &trans
+    &trans    &trans  &mkp MB2   &mkp MB3  &mkp MB1   &trans      &mkp MB1       &mkp MB1  &mkp MB3   &mkp MB2   &trans     &trans
+    &trans    &trans  &trans     &trans    &trans     &trans      &ctrl_alt_del  &TY53754  &word      &trans     &trans     &trans
+    &trans    &trans  &trans               &trans     &trans      &trans         &trans               &trans     &trans     &trans
+    &kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                             &to 0     &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
+                                &kp A                                                     &kp B
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        scroll_layer {
+            label = "Scr";
+            bindings = <
+    &trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &trans     &trans     &trans     &trans
+    &trans    &trans  &trans     &trans    &trans     &trans      &trans  &mkp MB1  &mkp MB3   &mkp MB2   &trans     &trans
+    &trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &trans     &trans     &trans     &trans
+    &trans    &trans  &trans               &trans     &trans      &trans  &trans               &trans     &trans     &trans
+    &kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                      &kp HOME  &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
+                                &kp A                                              &kp B
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        bt_layer {
+            label = "BT";
+            bindings = <
+    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &bt BT_CLR_ALL  &trans    &trans     &trans     &trans     &trans
+    &trans      &trans        &trans        &trans        &trans        &trans            &trans          &trans    &trans     &trans     &trans     &trans
+    &trans      &trans        &trans        &trans        &trans        &trans            &trans          &trans    &trans     &trans     &trans     &trans
+    &trans      &trans        &trans                      &trans        &trans            &trans          &trans               &trans     &trans     &trans
+    &kp LEFT    &kp UP        &kp SPACE     &kp DOWN      &kp RIGHT                                       &kp HOME  &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
+                                            &kp A                                                                   &kp B
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
     };
-
-    redo: redo {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LCTRL &kp Z>;
-        label = "REDO";
-    };
-
-    cuting: cuting {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LCTRL &kp X>;
-        label = "CUTING";
-    };
-
-    TY53754: TY53754 {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LS(T) &kp LS(Y) &kp N5 &kp N3 &kp N5 &kp N7 &kp N4>;
-        label = "TY53754";
-    };
-
-    ctrl_alt_del: ctrl_alt_del {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp RCTRL &kp LEFT_ALT &kp DELETE>;
-        label = "CTRL_ALT_DEL";
-    };
-
-    word: word {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp N0 &kp N5 &kp N0 &kp N2 &kp H &kp A &kp S &kp I &kp LS(M)>;
-        label = "word";
-    };
-};
-
-keymap {
-    compatible = "zmk,keymap";
-
-    default_layer {
-        label = "Def";
-        bindings = <
-&kp LSHFT             &kp Q     &kp W         &kp E      &kp R             &kp T             &kp Y           &kp U        &kp I                    &kp O      &kp P                    &kp MINUS
-&lt BT LANG_HIRAGANA  &kp A     &kp S         &kp D      &kp F             &kp G             &kp H           &kp J        &kp K                    &kp L      &kp COLON                &lt MOUSE DELETE
-&kp ESCAPE            &kp Z     &td_cuttingX  &td_paste  &td_paste         &kp B             &kp N           &kp M        &kp COMMA                &kp DOT    &kp SEMI                 &kp FSLH
-&mt LCTL TAB          &kp LGUI  &td_redo                 &kp LEFT_CONTROL  &kp LEFT_ALT      &lt FUNC ENTER  &lt 3 SPACE                           &kp LEFT   &kp DOWN                 &kp BACKSPACE
-&kp LEFT              &kp UP    &kp SPACE     &kp DOWN   &kp RIGHT                                           &to 3        &kp LANG_ZENKAKUHANKAKU  &kp ENTER  &kp LANG_ZENKAKUHANKAKU  &kp LANG_ZENKAKUHANKAKU
-                                              &kp B                                                                       &kp A
-        >;
-
-        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-    };
-
-    function_layer {
-        label = "Fnc";
-        bindings = <
-&kp F1    &kp F2  &kp F3     &kp F4    &kp F5     &trans         &trans         &kp UP_ARROW    &trans     &trans     &trans     &trans
-&kp F6    &kp F7  &kp F8     &kp F9    &kp F10    &trans         &kp LEFT       &kp DOWN_ARROW  &kp RIGHT  &kp F9     &kp F10    &trans
-&trans    &trans  &kp F11    &trans    &trans     &trans         &ctrl_alt_del  &TY53754        &word      &trans     &trans     &trans
-&trans    &trans  &kp LALT             &kp ENTER  &kp ENTER      &kp ENTER      &kp ENTER                  &trans     &trans     &trans
-&kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                                &kp HOME        &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
-                             &kp A                                                              &kp B
-        >;
-
-        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-    };
-
-    num_layer {
-        label = "Num";
-        bindings = <
-&kp CAPS         &trans      &trans     &kp N7    &kp N8     &kp N9         &trans     &trans     &trans     &trans     &trans     &trans
-&kp AT           &trans      &trans     &kp N4    &kp N5     &kp N6         &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH   &trans
-&mt LSHFT SPACE  &kp PERIOD  &kp N0     &kp N1    &kp N2     &kp N3         &trans     &kp FSLH   &kp SEMI   &kp SQT    &trans     &trans
-&trans           &kp ENTER   &kp ENTER            &kp ENTER  &kp ENTER      &kp ENTER  &kp ENTER             &trans     &trans     &trans
-&kp LEFT         &kp UP      &kp SPACE  &kp DOWN  &kp RIGHT                            &kp HOME   &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
-                                        &kp A                                                     &kp B
-        >;
-
-        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-    };
-
-    mouse_layer {
-        label = "Mouse";
-        bindings = <
-&trans    &trans  &trans     &trans    &trans     &trans      &trans         &trans    &trans     &trans     &trans     &trans
-&trans    &trans  &mkp MB2   &mkp MB3  &mkp MB1   &trans      &mkp MB1       &mkp MB1  &mkp MB3   &mkp MB2   &trans     &trans
-&trans    &trans  &trans     &trans    &trans     &trans      &ctrl_alt_del  &TY53754  &word      &trans     &trans     &trans
-&trans    &trans  &trans               &trans     &trans      &trans         &trans               &trans     &trans     &trans
-&kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                             &to 0     &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
-                             &kp A                                                     &kp B
-        >;
-
-        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-    };
-
-    scroll_layer {
-        label = "Scr";
-        bindings = <
-&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &trans     &trans     &trans     &trans
-&trans    &trans  &trans     &trans    &trans     &trans      &trans  &mkp MB1  &mkp MB3   &mkp MB2   &trans     &trans
-&trans    &trans  &trans     &trans    &trans     &trans      &trans  &trans    &trans     &trans     &trans     &trans
-&trans    &trans  &trans               &trans     &trans      &trans  &trans               &trans     &trans     &trans
-&kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                      &kp HOME  &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
-                             &kp A                                              &kp B
-        >;
-
-        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-    };
-
-    bt_layer {
-        label = "BT";
-        bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &bt BT_CLR_ALL  &trans    &trans     &trans     &trans     &trans
-&trans      &trans        &trans        &trans        &trans        &trans            &trans          &trans    &trans     &trans     &trans     &trans
-&trans      &trans        &trans        &trans        &trans        &trans            &trans          &trans    &trans     &trans     &trans     &trans
-&trans      &trans        &trans                      &trans        &trans            &trans          &trans               &trans     &trans     &trans
-&kp LEFT    &kp UP        &kp SPACE     &kp DOWN      &kp RIGHT                                       &kp HOME  &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
-                                        &kp A                                                                   &kp B
-        >;
-
-        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-    };
-};
 
 };
