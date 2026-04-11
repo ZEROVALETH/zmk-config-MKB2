@@ -18,50 +18,6 @@
     triggers-per-rotation = <1>;
 };
 
-/*
-/ {
-    
-    anin0: analog_input_0 {
-        compatible = "zmk,analog-input";
-        sampling-hz = <100>;
-        x-ch {
-            io-channels = <&adc 2>;
-            mv-mid = <1600>;
-            mv-min-max = <1600>;
-            mv-deadzone = <88>;
-            scale-multiplier = <1>;
-            scale-divisor = <800>;
-            invert;
-            evt-type = <INPUT_EV_REL>;
-            input-code = <INPUT_REL_X>;
-        };
-        y-ch {
-            io-channels = <&adc 3>;
-            mv-mid = <1600>;
-            mv-min-max = <1600>;
-            mv-deadzone = <88>;
-            scale-multiplier = <1>;
-            scale-divisor = <800>;
-            invert;
-            evt-type = <INPUT_EV_REL>;
-            input-code = <INPUT_REL_Y>;
-        };
-    };
-    
-
-    split_inputs {
-        #address-cells = <1>;
-        #size-cells = <0>;
-
-        stick_split: stick_split@0 {
-            compatible = "zmk,input-split";
-            status = "okay";
-            device = <&anin0>;
-            reg = <2>;
-        };
-    };
-};
-*/
 
 / {
     anin0: analog_input_0 {
@@ -73,7 +29,7 @@
             mv-min-max = <1600>;
             mv-deadzone = <88>;
             scale-multiplier = <1>; //変えない Def 1
-            scale-divisor = <100>; //速度設定　小さくすると速くなる
+            scale-divisor = <50>; //速度設定　小さくすると速くなる
             //invert;　//操作方向反転
             evt-type = <INPUT_EV_REL>;
             input-code = <INPUT_REL_X>;
@@ -84,7 +40,7 @@
             mv-min-max = <1600>;
             mv-deadzone = <88>;
             scale-multiplier = <1>; //変えない Def 1
-            scale-divisor = <100>; //速度設定　小さくすると速くなる
+            scale-divisor = <50>; //速度設定　小さくすると速くなる
             //invert; //操作方向反転
             evt-type = <INPUT_EV_REL>;
             input-code = <INPUT_REL_Y>;
