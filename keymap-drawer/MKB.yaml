@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: MKB}
 layers:
   Def:
-  - ESCAPE
+  - LSHFT
   - Q
   - W
   - E
@@ -25,7 +25,7 @@ layers:
   - L
   - MINUS
   - {t: DELETE, h: Mouse}
-  - LSHFT
+  - ESCAPE
   - Z
   - X
   - C
@@ -192,13 +192,13 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&mkp MB2'
+  - '&mkp MB3'
+  - '&mkp MB1'
   - {t: ▽, type: trans}
   - '&mkp MB1'
+  - '&mkp MB1'
   - '&mkp MB3'
-  - '&mkp MB2'
   - '&mkp MB2'
   - {t: ▽, type: trans}
   - {type: held}
