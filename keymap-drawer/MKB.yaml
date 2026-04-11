@@ -354,3 +354,6 @@ layers:
   - END
   - A
   - B
+combos:
+- p: [18, 19]
+  k: TAB
