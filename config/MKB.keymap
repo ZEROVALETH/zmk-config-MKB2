@@ -21,6 +21,15 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        twinTap_TAB {
+            bindings = <&kp TAB>;
+            key-positions = <18 19>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
