@@ -24,7 +24,7 @@ layers:
   - K
   - L
   - COLON
-  - {t: DELETE, h: Mouse}
+  - DEL
   - TAB
   - Z
   - '&td_cuttingX'
@@ -44,8 +44,8 @@ layers:
   - LEFT ALT
   - {t: ENTER, h: Fnc}
   - {t: SPACE, h: Mouse}
-  - LEFT
-  - DOWN
+  - PLUS
+  - UNDERSCORE
   - BACKSPACE
   - LEFT
   - UP
@@ -54,7 +54,7 @@ layers:
   - RIGHT
   - {t: Mouse, h: toggle}
   - LANG ZENKAKUHANKAKU
-  - ENTER
+  - {t: Num, h: toggle}
   - LANG ZENKAKUHANKAKU
   - LANG ZENKAKUHANKAKU
   - B
@@ -69,8 +69,8 @@ layers:
   - {t: ▽, type: trans}
   - UP ARROW
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LEFT PARENTHESIS
+  - RIGHT PARENTHESIS
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - F6
@@ -81,8 +81,8 @@ layers:
   - LEFT
   - DOWN ARROW
   - RIGHT
-  - F9
-  - F10
+  - LESS THAN
+  - GREATER THAN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -93,8 +93,8 @@ layers:
   - '&ctrl_alt_del'
   - '&TY53754'
   - '&word'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LEFT BRACKET
+  - RIGHT BRACKET
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -125,7 +125,7 @@ layers:
   - '7'
   - '8'
   - '9'
-  - {t: ▽, type: trans}
+  - PLUS
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -172,7 +172,7 @@ layers:
   - RIGHT
   - HOME
   - PG UP
-  - ENTER
+  - {t: Def, h: toggle}
   - PG DN
   - END
   - A
@@ -201,7 +201,7 @@ layers:
   - '&mkp MB3'
   - '&mkp MB2'
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -220,7 +220,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
