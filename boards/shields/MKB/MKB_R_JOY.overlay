@@ -73,7 +73,7 @@
         compatible = "zmk,input-listener";
         status = "okay";
         device = <&stick_split>;
-        //デフォルト設定
+        //マウスカーソル設定
         //input-processors = <&mouse_runtime_input_processor>;
 
         //上下左右をスクロールするなら下記
@@ -82,6 +82,8 @@
         //上下だけをスクロール
         //input-processors = <&joy_y_to_scroll_mapper>;
 
-        input-processors = <&zip_xy_scaler 1 4 &joy_y_to_scroll_mapper>;
+        //input-processors = <&zip_xy_scaler 1 4>, <&joy_y_to_scroll_mapper>;
+        input-processors = <&zip_x_scaler 1 4>, <&joy_y_to_scroll_mapper>, <&zip_scroll_scaler 1 3>;
+
     };
 };
