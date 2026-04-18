@@ -35,7 +35,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_COPY";
             #binding-cells = <0>;
-            bindings = <&kp C>, <&copy>;
+            bindings = <&kp C>, <&kp LC(C)>;
 
             tapping-term-ms = <180>;
         };
@@ -44,7 +44,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_PASTE";
             #binding-cells = <0>;
-            bindings = <&kp V>, <&paste>;
+            bindings = <&kp V>, <&kp LC(V)>;
 
             tapping-term-ms = <180>;
         };
@@ -53,7 +53,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_REDO";
             #binding-cells = <0>;
-            bindings = <&kp Z>, <&redo>;
+            bindings = <&kp Z>, <&kp LC(Z)>;
 
             tapping-term-ms = <180>;
         };
@@ -62,7 +62,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_CUTTINGX";
             #binding-cells = <0>;
-            bindings = <&kp X>, <&cuting>;
+            bindings = <&kp X>, <&kp LC(X)>;
 
             tapping-term-ms = <180>;
         };
@@ -80,50 +80,12 @@
     //通常keymap
 
     macros {
-        copy: copy {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(C)>;
-            label = "COPY";
-            tap-ms = <150>;
-        };
-
-        paste: paste {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(V)>;
-            label = "CUT";
-            tap-ms = <150>;
-        };
-
-        redo: redo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(Z)>;
-            label = "REDO";
-        };
-
-        cuting: cuting {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(X)>;
-            label = "CUTING";
-            tap-ms = <150>;
-        };
-
         TY53754: TY53754 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(T) &kp LS(Y) &kp N5 &kp N3 &kp N7 &kp N5 &kp N4>;
             label = "TY53754";
             tap-ms = <150>;
-        };
-
-        ctrl_alt_del: ctrl_alt_del {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RC(RA(DELETE))>;
-            label = "CTRL_ALT_DEL";
         };
 
         word: word {
@@ -184,12 +146,12 @@
         mouse_layer {
             label = "Mouse";
             bindings = <
-&trans    &trans  &trans     &trans    &trans     &trans      &trans         &trans    &trans     &trans     &trans     &trans
-&trans    &trans  &mkp MB2   &mkp MB3  &mkp MB1   &trans      &mkp MB1       &mkp MB1  &mkp MB3   &mkp MB2   &trans     &trans
-&trans    &trans  &trans     &trans    &trans     &trans      &ctrl_alt_del  &TY53754  &word      &trans     &trans     &trans
-&trans    &trans  &trans               &trans     &trans      &trans         &trans               &trans     &trans     &trans
-&kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                             &to 0     &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
-                             &kp A                                                     &kp B
+&trans    &trans  &trans     &trans    &trans     &trans      &trans           &trans    &trans     &trans     &trans     &trans
+&trans    &trans  &mkp MB2   &mkp MB3  &mkp MB1   &trans      &mkp MB1         &mkp MB1  &mkp MB3   &mkp MB2   &trans     &trans
+&trans    &trans  &trans     &trans    &trans     &trans      &kp LC(LA(DEL))  &TY53754  &word      &trans     &trans     &trans
+&trans    &trans  &trans               &trans     &trans      &trans           &trans               &trans     &trans     &trans
+&kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                               &to 0     &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
+                             &kp A                                                       &kp B
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
