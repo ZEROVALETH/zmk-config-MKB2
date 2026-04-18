@@ -83,7 +83,7 @@
         copy: copy {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp C>;
+            bindings = <&key_repeat &kp C>;
             label = "COPY";
             tap-ms = <150>;
         };
@@ -114,7 +114,7 @@
         TY53754: TY53754 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(T) &kp LS(Y) &kp N5 &kp N3 &kp N5 &kp N7 &kp N4>;
+            bindings = <&kp LS(T) &kp LS(Y) &kp N5 &kp N3 &kp N7 &kp NUMBER_5 &kp NUMBER_4>;
             label = "TY53754";
             tap-ms = <150>;
         };
@@ -156,12 +156,12 @@
         function_layer {
             label = "Fnc";
             bindings = <
-&trans    &kp F1  &kp F2     &kp F3    &kp F4     &kp F5         &trans         &kp UP_ARROW    &kp LPAR   &kp RIGHT_PARENTHESIS  &trans     &trans
-&trans    &kp F6  &kp F7     &kp F8    &kp F9     &kp F10        &kp LEFT       &kp DOWN_ARROW  &kp RIGHT  &kp F9                 &kp F10    &trans
-&trans    &trans  &kp F11    &trans    &trans     &trans         &ctrl_alt_del  &TY53754        &word      &trans                 &trans     &trans
-&trans    &trans  &kp LALT             &kp ENTER  &kp ENTER      &kp ENTER      &kp ENTER                  &trans                 &trans     &trans
-&kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                                &kp HOME        &kp PG_UP  &kp ENTER              &kp PG_DN  &kp END
-                             &kp A                                                              &kp B
+&trans    &kp F1  &kp F2     &kp F3    &kp F4     &kp F5         &trans     &kp UP_ARROW    &kp LPAR   &kp RIGHT_PARENTHESIS  &trans           &trans
+&trans    &kp F6  &kp F7     &kp F8    &kp F9     &kp F10        &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &kp F9                 &kp EXCLAMATION  &trans
+&trans    &trans  &kp F11    &trans    &trans     &trans         &kp F9     &kp F10         &word      &trans                 &trans           &trans
+&trans    &trans  &kp LALT             &kp ENTER  &kp ENTER      &kp ENTER  &kp ENTER                  &trans                 &trans           &trans
+&kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                            &kp HOME        &kp PG_UP  &kp ENTER              &kp PG_DN        &kp END
+                             &kp A                                                          &kp B
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
