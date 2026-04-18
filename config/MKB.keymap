@@ -102,7 +102,7 @@
         default_layer {
             label = "Def";
             bindings = <
-&kp LSHFT   &kp Q     &kp W         &kp E     &kp R             &kp T             &kp Y           &kp U        &kp I                    &kp O      &kp P                    &kp RIGHT_SHIFT
+&kp LSHFT   &kp Q     &kp W         &kp E     &kp R             &kp T             &kp Y           &kp U        &kp I                    &kp O      &kp P                    &kp LEFT_SHIFT
 &kp ESCAPE  &kp A     &kp S         &kp D     &kp F             &kp G             &kp H           &kp J        &kp K                    &kp L      &kp COLON                &lt MOUSE MINUS
 &kp TAB     &kp Z     &td_cuttingX  &td_copy  &td_paste         &kp B             &kp N           &kp M        &kp COMMA                &kp DOT    &kp SEMI                 &kp FSLH
 &kp CAPS    &kp LGUI  &td_redo                &Ctrl_changLayer  &kp LEFT_ALT      &lt FUNC ENTER  &lt 3 SPACE                           &kp LEFT   &kp DELETE               &kp BACKSPACE
@@ -118,11 +118,11 @@
         function_layer {
             label = "Fnc";
             bindings = <
-&trans    &kp F1  &kp F2     &kp F3    &kp F4     &kp F5         &trans     &kp UP_ARROW    &kp RPAR   &kp LPAR   &trans           &trans
-&trans    &kp F6  &kp F7     &kp F8    &kp F9     &kp F10        &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &kp F9     &kp EXCLAMATION  &kp QMARK
-&trans    &trans  &kp F11    &trans    &trans     &trans         &kp F9     &kp F10         &word      &trans     &trans           &trans
-&trans    &trans  &kp LALT             &kp ENTER  &kp ENTER      &kp ENTER  &kp ENTER                  &trans     &trans           &trans
-&kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                            &kp HOME        &kp PG_UP  &kp ENTER  &kp PG_DN        &kp END
+&trans    &kp F1  &kp F2     &kp F3    &kp F4     &kp F5         &trans     &kp UP_ARROW    &kp LS(NUMBER_8)  &kp LPAR   &trans           &trans
+&trans    &kp F6  &kp F7     &kp F8    &kp F9     &kp F10        &kp LEFT   &kp DOWN_ARROW  &kp RIGHT         &kp F9     &kp EXCLAMATION  &kp QMARK
+&trans    &trans  &kp F11    &trans    &trans     &trans         &kp F7     &kp F9          &kp F10           &trans     &trans           &trans
+&trans    &trans  &kp LALT             &kp ENTER  &kp ENTER      &kp ENTER  &kp ENTER                         &trans     &trans           &trans
+&kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                            &kp HOME        &kp PG_UP         &kp ENTER  &kp PG_DN        &kp END
                              &kp A                                                          &kp B
             >;
 
