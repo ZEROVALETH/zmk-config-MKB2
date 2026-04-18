@@ -122,7 +122,7 @@
         ctrl_alt_del: ctrl_alt_del {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RC(LA(DELETE))>;
+            bindings = <&kp RC(RA(DELETE))>;
             label = "CTRL_ALT_DEL";
         };
 
