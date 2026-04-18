@@ -77,7 +77,7 @@
         };
     };
 
-    //通常keymap
+
 
     macros {
         TY53754: TY53754 {
@@ -96,16 +96,17 @@
         };
     };
 
+    //通常keymap
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             label = "Def";
             bindings = <
-&kp LSHFT   &kp Q     &kp W         &kp E     &kp R             &kp T             &kp Y           &kp U        &kp I                    &kp O      &kp P                    &kp LEFT_SHIFT
+&kp LSHFT   &kp Q     &kp W         &kp E     &kp R             &kp T             &kp Y           &kp U        &kp I                    &kp O      &kp P                    &kp LSHFT
 &kp ESCAPE  &kp A     &kp S         &kp D     &kp F             &kp G             &kp H           &kp J        &kp K                    &kp L      &kp COLON                &lt MOUSE MINUS
 &kp TAB     &kp Z     &td_cuttingX  &td_copy  &td_paste         &kp B             &kp N           &kp M        &kp COMMA                &kp DOT    &kp SEMI                 &kp FSLH
-&kp CAPS    &kp LGUI  &td_redo                &Ctrl_changLayer  &kp LEFT_ALT      &lt FUNC ENTER  &lt 3 SPACE                           &kp LEFT   &kp DELETE               &kp BACKSPACE
+&kp CAPS    &kp LGUI  &td_redo                &Ctrl_changLayer  &kp LEFT_ALT      &lt FUNC ENTER  &lt 3 SPACE                           &kp ESCAPE    &kp DELETE               &kp BACKSPACE
 &kp LEFT    &kp UP    &to 2         &kp DOWN  &kp RIGHT                                           &to 3        &kp LANG_ZENKAKUHANKAKU  &kp ENTER  &kp LANG_ZENKAKUHANKAKU  &kp LANG_ZENKAKUHANKAKU
                                     &kp B                                                                      &kp A
             >;
