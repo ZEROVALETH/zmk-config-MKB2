@@ -61,7 +61,7 @@
             reg = <2>;
         };
     };
-/*
+
     //Yのみスクロール設定
     input_processors {
         joy_y_to_scroll_mapper: joy_y_to_scroll_mapper {
@@ -71,7 +71,7 @@
             map = <INPUT_REL_Y INPUT_REL_WHEEL>;
         };
     };
-*/
+
 
     stick_listener: stick_listener {
         compatible = "zmk,input-listener";
