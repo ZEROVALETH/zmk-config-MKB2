@@ -29,7 +29,7 @@
             mv-min-max = <1600>;
             mv-deadzone = <88>;
             scale-multiplier = <1>; //変えない Def 1
-            scale-divisor = <30>; //速度設定　小さくすると速くなる
+            scale-divisor = <100>; //速度設定　小さくすると速くなる
             //invert;　//操作方向反転
             evt-type = <INPUT_EV_REL>;
             input-code = <INPUT_REL_X>;
@@ -40,10 +40,11 @@
             mv-min-max = <1600>;
             mv-deadzone = <88>;
             scale-multiplier = <1>; //変えない Def 1
-            scale-divisor = <30>; //速度設定　小さくすると速くなる
+            scale-divisor = <100>; //速度設定　小さくすると速くなる
             //invert; //操作方向反転
             evt-type = <INPUT_EV_REL>;
-            input-code = <INPUT_REL_Y>;
+            //input-code = <INPUT_REL_Y>; //original
+            input-code = <INPUT_REL_WHEEL>;
         };
     };
 
@@ -83,7 +84,7 @@
         //input-processors = <&joy_y_to_scroll_mapper>;
 
         //input-processors = <&zip_xy_scaler 1 4>, <&joy_y_to_scroll_mapper>;
-        input-processors = <&zip_x_scaler 1 4>, <&joy_y_to_scroll_mapper>, <&zip_scroll_scaler 1 3>;
+        input-processors = <&zip_x_scaler 1 4>, <&zip_scroll_scaler 1 3>;
 
     };
 };
