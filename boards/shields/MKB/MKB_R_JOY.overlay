@@ -29,7 +29,7 @@
             mv-min-max = <1600>;
             mv-deadzone = <88>;
             scale-multiplier = <1>; //変えない Def 1
-            scale-divisor = <300>; //速度設定　小さくすると速くなる
+            scale-divisor = <500>; //速度設定　小さくすると速くなる
             //invert;　//操作方向反転
             evt-type = <INPUT_EV_REL>;
             //input-code = <INPUT_REL_X>; // マウスで使うときON
@@ -42,7 +42,7 @@
             mv-min-max = <1600>;
             mv-deadzone = <88>;
             scale-multiplier = <1>; //変えない Def 1
-            scale-divisor = <300>; //速度設定　小さくすると速くなる
+            scale-divisor = <500>; //速度設定　小さくすると速くなる
             //invert; //操作方向反転
             evt-type = <INPUT_EV_REL>;
             //input-code = <INPUT_REL_Y>; //original
