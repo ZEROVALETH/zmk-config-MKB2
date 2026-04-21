@@ -75,6 +75,13 @@
 
             tapping-term-ms = <180>;
         };
+
+        Bold: Bold {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BOLD";
+            #binding-cells = <0>;
+            bindings = <&kp B>, <&kp LC(B)>;
+        };
     };
 
     macros {
@@ -102,12 +109,12 @@
         default_layer {
             label = "Def";
             bindings = <
-&kp LSHFT   &kp Q     &kp W         &kp E     &kp R             &kp T             &kp Y           &kp U        &kp I        &kp O       &kp P          &lt MOUSE MINUS 
-&kp ESCAPE  &kp A     &kp S         &kp D     &kp F             &kp G             &kp H           &kp J        &kp K        &kp L       &kp COLON      &kp RSHFT
-&kp TAB     &kp Z     &td_cuttingX  &td_copy  &td_paste         &kp B             &kp N           &kp M        &kp COMMA    &kp DOT     &kp SEMI       &kp FSLH
-&kp CAPS    &kp LGUI  &td_redo                &Ctrl_changLayer  &kp LEFT_ALT      &lt FUNC ENTER  &lt 3 SPACE               &kp ESCAPE  &kp DELETE     &kp BACKSPACE
-&kp LEFT    &kp UP    &to 2         &kp DOWN  &kp RIGHT                                           &to 3        &kp PAGE_UP  &kp ENTER   &kp PAGE_DOWN  &kp LANG_ZENKAKUHANKAKU
-                                    &kp B                                                                       &kp C
+&kp Q     &kp W         &kp E     &kp R      &kp T             &kp LEFT_SHIFT      &kp Y           &kp U        &kp I        &kp O       &kp P          &lt MOUSE MINUS
+&kp A     &kp S         &kp D     &kp F      &kp F             &kp ESCAPE          &kp H           &kp J        &kp K        &kp L       &kp COLON      &kp RSHFT
+&kp Z     &td_cuttingX  &td_copy  &td_paste  &Bold             &kp TAB             &kp N           &kp M        &kp COMMA    &kp DOT     &kp SEMI       &kp FSLH
+&kp CAPS  &kp LGUI      &td_redo             &Ctrl_changLayer  &kp LEFT_ALT        &lt FUNC ENTER  &lt 3 SPACE               &kp ESCAPE  &kp DELETE     &kp BACKSPACE
+&kp LEFT  &kp UP        &to 2     &kp DOWN   &kp RIGHT                                             &to 3        &kp PAGE_UP  &kp ENTER   &kp PAGE_DOWN  &kp LANG_ZENKAKUHANKAKU
+                                  &kp B                                                                         &kp C
             >;
 
             sensor-bindings =
@@ -118,12 +125,12 @@
         function_layer {
             label = "Fnc";
             bindings = <
-&trans    &kp F1  &kp F2     &kp F3    &kp F4     &kp F5         &kp F5     &kp LS(N8)      &kp UP_ARROW    &kp LPAR         &trans           &trans
-&trans    &kp F6  &kp F7     &kp F8    &kp F9     &kp F10        &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp EXCLAMATION  &kp QMARK
-&trans    &trans  &kp F11    &trans    &trans     &trans         &kp F7     &kp F9          &kp F10         &trans           &trans           &trans
-&trans    &trans  &kp LALT             &kp ENTER  &kp ENTER      &kp ENTER  &kp ENTER                       &trans           &trans           &trans
-&kp LEFT  &kp UP  &kp SPACE  &kp DOWN  &kp RIGHT                            &kp HOME        &kp PG_UP       &kp ENTER        &kp PG_DN        &kp END
-                             &kp A                                                          &kp B
+&trans    &kp F1  &kp F2    &kp F3    &kp F4     &kp F5         &kp F5          &kp LS(UP_ARROW)  &kp LS(N8)       &kp LPAR   &trans           &trans
+&trans    &kp F6  &kp F7    &kp F8    &kp F9     &kp F10        &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT_ARROW  &trans     &kp EXCLAMATION  &kp QMARK
+&trans    &trans  &kp F11   &trans    &trans     &trans         &kp F7          &kp F9            &kp F10          &trans     &trans           &trans
+&trans    &trans  &kp LALT            &kp ENTER  &kp ENTER      &kp ENTER       &kp ENTER                          &trans     &trans           &trans
+&kp LEFT  &kp UP  &to 0     &kp DOWN  &kp RIGHT                                 &kp HOME          &kp PG_UP        &kp ENTER  &kp PG_DN        &kp END
+                            &kp A                                                                 &kp B
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -132,12 +139,12 @@
         num_layer {
             label = "Num";
             bindings = <
-&kp CAPS         &trans      &trans     &kp N7    &kp N8     &kp N9         &trans     &trans     &trans     &trans     &trans     &trans
-&kp LBKT         &trans      &trans     &kp N4    &kp N5     &kp N6         &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH   &trans
-&mt LSHFT SPACE  &kp PERIOD  &kp N0     &kp N1    &kp N2     &kp N3         &trans     &kp FSLH   &kp SEMI   &kp SQT    &trans     &trans
-&trans           &kp ENTER   &kp ENTER            &kp ENTER  &kp ENTER      &kp ENTER  &kp ENTER             &trans     &trans     &trans
-&kp LEFT         &kp UP      &to 0      &kp DOWN  &kp RIGHT                            &kp HOME   &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
-                                        &kp A                                                     &kp B
+&kp CAPS          &none      &kp N7  &kp N8    &kp N9     &kp EQUAL      &trans     &trans     &trans     &trans     &trans     &trans
+&kp LBKT          &none      &kp N4  &kp N5    &kp N6     &kp PLUS       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH   &trans
+&mt LSHFT PERIOD  &kp N0     &kp N1  &kp N2    &kp N3     &kp MINUS      &trans     &kp FSLH   &kp SEMI   &kp SQT    &trans     &trans
+&trans            &kp ENTER  &trans            &trans     &trans         &trans     &trans                &trans     &trans     &trans
+&kp LEFT          &kp UP     &to 0   &kp DOWN  &kp RIGHT                            &kp HOME   &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
+                                     &kp A                                                     &kp B
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
