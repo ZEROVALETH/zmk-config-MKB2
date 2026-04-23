@@ -144,7 +144,7 @@
 &mt LSHFT PERIOD  &kp N0     &kp N1  &kp N2    &kp N3     &kp MINUS      &trans     &kp FSLH     &kp SEMI   &kp SQT    &trans     &trans
 &trans            &kp ENTER  &trans            &trans     &trans         &trans     &trans                  &trans     &trans     &trans
 &kp LEFT          &kp UP     &to 0   &kp DOWN  &kp RIGHT                            &kp HOME     &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
-                                     &kp A                                                       &kp B
+                                     &kp B                                                       &kp B
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
