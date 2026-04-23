@@ -140,7 +140,7 @@
             label = "Num";
             bindings = <
 &kp CAPS          &kp DOUBLE_QUOTES  &kp N7  &kp N8    &kp N9     &kp EQUAL      &kp TILDE  &kp INT_YEN  &trans     &trans     &trans     &trans
-&kp LBKT          &kp ASTRK          &kp N4  &kp N5    &kp N6     &kp PLUS       &kp UNDER  &kp EQUAL    &kp LBKT   &kp RBKT   &kp BSLH   &trans
+&kp LBKT          &kp ASTRK          &kp N4  &kp N5    &kp N6     &kp PLUS       &trans     &kp EQUAL    &kp LBKT   &kp RBKT   &kp BSLH   &trans
 &mt LSHFT PERIOD  &kp N0             &kp N1  &kp N2    &kp N3     &kp MINUS      &trans     &kp FSLH     &kp SEMI   &kp SQT    &trans     &trans
 &trans            &kp ENTER          &trans            &trans     &trans         &trans     &trans                  &trans     &trans     &trans
 &kp LEFT          &kp UP             &to 0   &kp DOWN  &kp RIGHT                            &kp HOME     &kp PG_UP  &kp ENTER  &kp PG_DN  &kp END
