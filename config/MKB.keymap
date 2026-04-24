@@ -109,12 +109,12 @@
         default_layer {
             label = "Def";
             bindings = <
-&kp LEFT_SHIFT  &kp W         &kp E     &kp R      &kp T             &kp Q             &kp Y           &kp U         &kp I        &kp O       &kp P          &lt MOUSE MINUS
-&kp A           &kp S         &kp D     &kp F      &kp G             &kp ESCAPE        &kp H           &kp J         &kp K        &kp L       &kp COLON      &kp RSHFT
-&kp Z           &td_cuttingX  &td_copy  &td_paste  &Bold             &td_redo          &kp N           &kp M         &kp COMMA    &kp DOT     &kp SEMI       &kp FSLH
-&kp TAB         &kp LGUI      &kp CAPS             &Ctrl_changLayer  &kp LEFT_ALT      &lt FUNC ENTER  &kp SPACE                  &kp ESCAPE  &kp DELETE     &kp BACKSPACE
-&kp LEFT        &kp UP        &to 2     &kp DOWN   &kp RIGHT                                           &lt 4 K_COPY  &kp PAGE_UP  &kp ENTER   &kp PAGE_DOWN  &kp LANG_ZENKAKUHANKAKU
-                                        &kp B                                                                        &kp C
+&kp LEFT_SHIFT  &kp W         &kp E     &kp R      &kp T      &kp Q             &kp Y           &kp U         &kp I        &kp O       &kp P          &lt MOUSE MINUS
+&kp A           &kp S         &kp D     &kp F      &kp G      &kp ESCAPE        &kp H           &kp J         &kp K        &kp L       &kp COLON      &kp RSHFT
+&kp Z           &td_cuttingX  &td_copy  &td_paste  &Bold      &td_redo          &kp N           &kp M         &kp COMMA    &kp DOT     &kp SEMI       &kp FSLH
+&kp TAB         &kp LGUI      &kp CAPS             &kp LCTRL  &kp LEFT_ALT      &lt FUNC ENTER  &kp SPACE                  &kp ESCAPE  &kp DELETE     &kp BACKSPACE
+&kp LEFT        &kp UP        &to 2     &kp DOWN   &kp RIGHT                                    &lt 4 K_COPY  &kp PAGE_UP  &kp ENTER   &kp PAGE_DOWN  &kp LANG_ZENKAKUHANKAKU
+                                        &kp B                                                                 &kp C
             >;
 
             sensor-bindings =
