@@ -53,8 +53,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_REDO";
             #binding-cells = <0>;
-            bindings = <&kp Z>, <&kp LC(Z)>;
-
+            bindings = <&kp LC(Z)>;
             tapping-term-ms = <180>;
         };
 
@@ -88,6 +87,8 @@
             label = "COLONSEMI";
             #binding-cells = <0>;
             bindings = <&kp COLON>, <&kp SEMI>;
+
+            tapping-term-ms = <180>;
         };
     };
 
