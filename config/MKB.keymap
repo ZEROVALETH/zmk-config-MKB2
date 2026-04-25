@@ -114,7 +114,7 @@
 &kp Z           &td_cuttingX  &td_copy  &td_paste  &Bold      &td_redo              &kp N           &kp M         &kp COMMA    &kp DOT     &kp SEMI       &kp FSLH
 &kp TAB         &kp LGUI      &kp CAPS             &kp LCTRL  &Ctrl_changLayer      &lt FUNC ENTER  &kp SPACE                  &kp ESCAPE  &kp DELETE     &kp BACKSPACE
 &kp LEFT        &kp UP        &to 2     &kp DOWN   &kp RIGHT                                        &to 3  &kp PAGE_UP  &kp ENTER   &kp PAGE_DOWN  &kp LANG_ZENKAKUHANKAKU
-                                        &kp B                                                                     &kp B
+                                        &kp B                                                                     &kp A
             >;
 
             sensor-bindings =
