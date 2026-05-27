@@ -117,15 +117,15 @@
         default_layer {
             label = "Def";
             bindings = <
-&kp LEFT_SHIFT  &kp W         &kp E     &kp R      &kp T             &kp Q             &kp Y           &kp U      &kp I        &kp O       &kp P          &lt MOUSE MINUS
-&kp A           &kp S         &kp D     &kp F      &kp G             &kp ESCAPE        &kp H           &kp J      &kp K        &kp L       &colonSemi     &kp RSHFT
+&kp LEFT_SHIFT  &kp W         &kp E     &kp R      &kp T             &kp Q             &kp Y           &kp U      &kp I        &kp O       &kp RSHFT      &lt MOUSE MINUS
+&kp A           &kp S         &kp D     &kp F      &kp G             &kp ESCAPE        &kp H           &kp J      &kp K        &kp L       &colonSemi     &kp P
 &kp Z           &td_cuttingX  &td_copy  &td_paste  &Bold             &td_redo          &kp N           &kp M      &kp COMMA    &kp DOT     &kp LS(INT1)   &kp FSLH
 &kp TAB         &kp LGUI      &kp CAPS             &Ctrl_changLayer  &kp LEFT_ALT      &lt FUNC ENTER  &kp SPACE               &kp ESCAPE  &kp DELETE     &kp BACKSPACE
 &kp LEFT        &kp UP        &to 2     &kp DOWN   &kp RIGHT                                           &mo 4      &kp PAGE_UP  &td_redo    &kp PAGE_DOWN  &kp LANG_ZENKAKUHANKAKU
                                         &kp C                                                                     &kp A
             >;
 
-            sensor-bindings =
+            sensor-bindings
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>,
                 <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
