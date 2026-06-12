@@ -55,9 +55,9 @@ manifest:
     - name: zmk-module-ble-management
       remote: cormoran
       revision: main
-    - name: zmk-module-settings-rpc
-      remote: cormoran
-      revision: main
+    #- name: zmk-module-settings-rpc
+    #  remote: cormoran
+    #  revision: main
 
   self:
     path: config
