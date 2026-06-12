@@ -107,6 +107,20 @@
             bindings = <&kp N0 &kp N5 &kp N0 &kp N2 &kp H &kp A &kp S &kp I &kp LS(M)>;
             label = "word";
         };
+        
+        VMUp: VMUp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LG(RIGHT_ARROW))>;
+            label = "VMUP";
+        };
+
+        VMunder: VMunder {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LG(LEFT_ARROW))>;
+            label = "VMUNDER";
+        };
     };
 
     //通常keymap
