@@ -114,7 +114,7 @@
 
             //bindings = <&kp LC(LG(RIGHT_ARROW))>;
 
-            bindings = <&kp LC(LG(LEFT_ARROW))>;
+            bindings = <&kp LC(LG(RIGHT_ARROW))>;
             label = "VMUP";
         };
 
