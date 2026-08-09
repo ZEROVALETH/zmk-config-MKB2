@@ -139,7 +139,7 @@
 &kp Z           &td_cuttingX  &td_copy  &td_paste  &Bold             &td_redo          &kp N           &kp M      &kp COMMA  &kp DOT     &kp LS(INT1)    &kp FSLH
 &kp TAB         &kp LGUI      &kp CAPS             &Ctrl_changLayer  &kp LEFT_ALT      &lt FUNC ENTER  &kp SPACE             &kp ESCAPE  &kp DELETE      &kp BACKSPACE
 &kp LEFT        &kp UP        &to 2     &kp DOWN   &kp RIGHT                                           &mo 4      &VMUp      &td_redo    &VMunder        &kp LANG_ZENKAKUHANKAKU
-                                        &kp B                                                                     &kp B
+                                        &kp A                                                                     &kp B
             >;
 
             sensor-bindings =
